@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>超炫酷css3登录界面</title>
+    <meta name="description" content="利用Css3 html5实现的超炫酷的登录">
+    <meta name="keywords" content="Css3, html5,炫酷登录,登录模板，jquery,jquery插件">
+    <link rel="Shortcut icon" href="//www.jq22.com/favicon.ico">
+    <link href="/static/CSS/demo.css?v4" rel="stylesheet" media="all">
+    <!--[if IE]>
+
+    <style type="text/css">
+        li.purchase a {
+            padding-top: 5px;
+            background-position: 0px -4px;
+        }
+
+        li.remove_frame a {
+            padding-top: 5px;
+            background-position: 0px -3px;
+        }
+    </style>
+
+    <![endif]-->
+    <style>
+        .fdad a {
+            color: #000;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .fdad {
+            top: 66px;
+        }
+
+        .xgcj li {
+            font-size: 14px;
+            line-height: 20px;
+            list-style-type: none;
+            transition: all 1s ease 0s;
+            border-radius: 5px;
+        }
+
+        .xgcj li:hover {
+            background-color: #e4e4e4;
+        }
+
+        .xgcj {
+            background-color: rgba(255, 255, 255, .3);
+            overflow-x: hidden;
+        }
+
+        .xgcj ul {
+            padding: 10px
+        }
+
+        .xgcj h3 {
+            line-height: 30px;
+        }
+
+        .xgcj p {
+            padding-left: 20px;
+            font-size: 13px;
+            display: none;
+        }
+
+        .xgcj span {
+            font-family: "宋体";
+        }
+
+        .xgcj li:hover p {
+            display: block;
+        }
+    </style>
+    <script src="https://www.googletagservices.com/activeview/js/current/osd.js?cb=%2Fr20100101"></script>
+    <script src="//hm.baidu.com/hm.js?b3a3fc356d0af38b811a0ef8d50716b8"></script>
+    <script src="https://partner.googleadservices.com/gampad/cookie.js?domain=www.jq22.com&amp;callback=_gfp_s_&amp;client=ca-pub-2935286260943234&amp;cookie=ID%3D72f902e54d5f0b80%3AT%3D1602233330%3AS%3DALNI_MbHb1gRALGdvWPnM_0nUXuOGQ8dGA"></script>
+    <script src="https://pagead2.googlesyndication.com/pagead/js/r20201007/r20190131/show_ads_impl_fy2019.js"
+            id="google_shimpl"></script>
+    <script type="text/javascript">
+        var txt = "https://www.jq22.com/demo/jQueryLogin201708272212";
+        window.g1 = txt.substr(0, 3);
+        window.g2 = txt.substr(0, 19);
+    </script>
+    <script src="static/JS/pace.min.js" charset="gbk"></script>
+    <link href="/static/CSS/pace-theme-barber-shop.css" rel="stylesheet">
+    <script src="https://libs.baidu.com/jquery/1.7.0/jquery.min.js"></script>
+    <script src="static/JS/jquery.qrcode.min.js"></script>
+    <script type="text/javascript">
+        var dqfl = "UI,输入";
+        var theme_list_open = false;
+
+        $(document).ready(function () {
+            function fixHeight() {
+                var headerHeight = $("#switcher").height();
+                $("#iframe").attr("height", $(window).height() - 54 + "px");
+            }
+
+            $(window).resize(function () {
+                fixHeight();
+            }).resize();
+
+            $('.icon-monitor').addClass('active');
+
+            $(".icon-mobile-3").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width-3');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $(".icon-mobile-2").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width-2');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+
+            $(".icon-mobile-1").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width');
+                $('.icon-tablet,.icon-mobile,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $(".icon-tablet").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('tablet-width');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $(".icon-monitor").click(function () {
+                $("#by").css("overflow-y", "hidden");
+                $('#iframe-wrap').removeClass().addClass('full-width');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            if (dqfl.indexOf("APP模板") != -1) {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width-2');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        function Responsive($a) {
+            if ($a == true) $("#Device").css("opacity", "100");
+            if ($a == false) $("#Device").css("opacity", "0");
+            $('#iframe-wrap').removeClass().addClass('full-width');
+            $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+            $(this).addClass('active');
+            return false;
+        };
+    </script>
+    <link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.jq22.com" as="script">
+    <script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.jq22.com"></script>
+</head>
+
+<body id="by" style="overflow-y: hidden" class="  pace-done">
+<div class="pace  pace-inactive">
+    <div class="pace-progress" data-progress-text=" 100%" data-progress="99" style="width: 100%;">
+        <div class="pace-progress-inner"></div>
+    </div>
+    <div class="pace-activity"></div>
+</div>
+<div id="switcher">
+    <div class="center">
+        <ul>
+            <li class="logoTop" id="sj2"><a href="https://www.jq22.com/jquery-info15518">超炫酷css3登录界面</a></li>
+            <div id="Device">
+                <li class="device-monitor"><a href="javascript:">
+                    <div class="icon-monitor active">
+                    </div>
+                </a></li>
+                <li class="device-mobile"><a href="javascript:">
+                    <div class="icon-tablet">
+                    </div>
+                </a></li>
+                <li class="device-mobile"><a href="javascript:">
+                    <div class="icon-mobile-1">
+                    </div>
+                </a></li>
+                <li class="device-mobile-2"><a href="javascript:">
+                    <div class="icon-mobile-2">
+                    </div>
+                </a></li>
+                <li class="device-mobile-3"><a href="javascript:">
+                    <div class="icon-mobile-3">
+                    </div>
+                </a></li>
+            </div>
+            <li class="top2" id="sj"><a href="#">手机二维码预览</a>
+                <div class="vm">
+                    <div id="output">
+                        <canvas width="150" height="150"></canvas>
+                    </div>
+                    <p style="color: #808080">扫一扫，直接在手机上打开</p>
+                </div>
+            </li>
+            <script>
+                jQuery('#output').qrcode({width: 150, height: 150, text: window.location.href});
+            </script>
+            <li class="remove_frame" style="display:n"><a href="https://www.jq22.com/demo/jQueryLogin201708272212"
+                                                          title="移除框架"></a></li>
+        </ul>
+    </div>
+</div>
+<div id="iframe-wrap">
+    <iframe id="iframe" src="https://www.jq22.com/demo/jQueryLogin201708272212" frameborder="0" width="100%"
+            height="898px"></iframe>
+</div>
+<div class="fdad" style="display: none;">
+    <div class="fdl">Advertisement</div>
+    <div class="fdr">x</div>
+    <div class="fdadnr">
+        <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+        <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px"
+             data-ad-client="ca-pub-2935286260943234" data-ad-slot="6063645905" data-adsbygoogle-status="done">
+            <ins id="aswift_0_expand"
+                 style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;">
+                <ins id="aswift_0_anchor"
+                     style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent;">
+                    <iframe id="aswift_0" name="aswift_0"
+                            style="left:0;position:absolute;top:0;border:0;width:336px;height:280px;"
+                            sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                            width="336" height="280" frameborder="0"
+                            src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2935286260943234&amp;output=html&amp;h=280&amp;slotname=6063645905&amp;adk=4216061878&amp;adf=1165734422&amp;w=336&amp;lmt=1602295091&amp;psa=1&amp;guci=2.2.0.0.2.2.0.0&amp;format=336x280&amp;url=https%3A%2F%2Fwww.jq22.com%2Fyanshi15518%3F__cf_chl_captcha_tk__%3Db284e7683730817ae4284bba8e22049dd305ac61-1602295069-0-AUYoN0M1QKKH3_0rbkzYTiD-qubUYZvwBTWINZ-yHhDKBX6quL3H_AFcN1hE-ump5uM-Cj0TxcgwvNYHou4rAG-vBwYQ-gOACG6F0e5E4SilUtgopsfyJvmS12J2Blm1TpeC-UEOXriN3P303LPIZqqZVCUA8DH9XfNfpMUXGdewNjGNNmB_1UQh1f-ptzq35luBQ2K1EKA9_ZBrZmXUqK7rIvXyCopppclTGdsPzAgg-u8A43Sz8HndZYByk7ElRC6RYJGiD-gA_pFpq8cy9SoEW9WnZArBGFiiEbFjw_qlN3Ld89NZuYVj7_9uTVm6RofhQHsagQiVHcKZlm_M1GU&amp;flash=0&amp;wgl=1&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjowfV0.&amp;dt=1602295093552&amp;bpp=113&amp;bdt=1831&amp;idt=406&amp;shv=r20201007&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D72f902e54d5f0b80%3AT%3D1602233330%3AS%3DALNI_MbHb1gRALGdvWPnM_0nUXuOGQ8dGA&amp;correlator=2629541098545&amp;frm=20&amp;pv=2&amp;ga_vid=1297472572.1602295094&amp;ga_sid=1602295094&amp;ga_hid=1515901452&amp;ga_fc=0&amp;iag=0&amp;icsg=10106&amp;dssz=15&amp;mdo=0&amp;mso=8&amp;u_tz=480&amp;u_his=2&amp;u_java=0&amp;u_h=2160&amp;u_w=3840&amp;u_ah=2120&amp;u_aw=3840&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=1528&amp;ady=86&amp;biw=1889&amp;bih=952&amp;scr_x=0&amp;scr_y=0&amp;eid=182982100%2C182982300&amp;oid=3&amp;pvsid=1253134278571968&amp;pem=91&amp;ref=https%3A%2F%2Fwww.jq22.com%2Fyanshi15518&amp;rx=0&amp;eae=0&amp;fc=896&amp;brdim=510%2C634%2C510%2C634%2C3840%2C0%2C1905%2C1040%2C1889%2C952&amp;vis=1&amp;rsz=%7C%7CfeE%7C&amp;abl=CF&amp;pfx=0&amp;fu=8200&amp;bc=31&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;xpc=1dgR4sb5nq&amp;p=https%3A//www.jq22.com&amp;dtd=460"
+                            marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true"
+                            scrolling="no" allowfullscreen="true" data-google-container-id="a!1"
+                            data-google-query-id="CNDqpq_2qOwCFQSAvQodT2kCmg" data-load-complete="true"></iframe>
+                </ins>
+            </ins>
+        </ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <div class="xgcj">
+            <ul>
+                <div style="width:100%">
+                    <div style="float:left"><h3>相关插件</h3></div>
+                    <div style="clear: left;"></div>
+                </div>
+                <li>
+                    <a href="https://www.jq22.com/jquery-info698"><span>&gt;</span> 京东产品详细页图片放大效果</a>
+                    <p>京东商城详细页产品图片列表以及放大镜效果
+                        兼容ie6+,谷歌,火狐</p>
+                </li>
+                <li>
+                    <a href="https://www.jq22.com/jquery-info9486"><span>&gt;</span> jQuery全屏背景插件Vegas2</a>
+                    <p>网页全屏背景jQuery插件 Vegas2，它和其它背景插件不同之处就是带有幻灯片功能。幻灯片的切换有多种风格，如旋转、渐隐、左右等方式，切换的时候还有进度条显示。</p>
+                </li>
+                <li>
+                    <a href="https://www.jq22.com/jquery-info577"><span>&gt;</span> jquery固定标题控制插件Midnight.js</a>
+                    <p>midnight.js是在页面滚动时控制多标题设计的开关jQuery插件，所以对应下面的内容你总能看到一个标题。</p>
+                </li>
+                <li>
+                    <a href="https://www.jq22.com/jquery-info5741"><span>&gt;</span> 首页大屏背景图平滑切换</a>
+                    <p>首页大屏背景图平滑切换</p>
+                </li>
+                <li>
+                    <a href="https://www.jq22.com/jquery-info13221"><span>&gt;</span> 基于canvas的星空效果</a>
+                    <p>基于canvas的星空粒子效果（代码注释全！）</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".fdr").click(function () {
+                $(".fdad").hide();
+            });
+        });
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?b3a3fc356d0af38b811a0ef8d50716b8";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</div>
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;">
+    <ins id="aswift_1_expand"
+         style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;">
+        <ins id="aswift_1_anchor"
+             style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;">
+            <iframe id="aswift_1" name="aswift_1"
+                    style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;"
+                    sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                    frameborder="0"
+                    src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2935286260943234&amp;output=html&amp;adk=84938819&amp;adf=1132191096&amp;lmt=1602295091&amp;plat=1%3A32776%2C2%3A16809992%2C9%3A32776%2C10%3A32%2C11%3A32%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C40%3A32&amp;guci=2.2.0.0.2.2.0.0&amp;format=0x0&amp;url=https%3A%2F%2Fwww.jq22.com%2Fyanshi15518%3F__cf_chl_captcha_tk__%3Db284e7683730817ae4284bba8e22049dd305ac61-1602295069-0-AUYoN0M1QKKH3_0rbkzYTiD-qubUYZvwBTWINZ-yHhDKBX6quL3H_AFcN1hE-ump5uM-Cj0TxcgwvNYHou4rAG-vBwYQ-gOACG6F0e5E4SilUtgopsfyJvmS12J2Blm1TpeC-UEOXriN3P303LPIZqqZVCUA8DH9XfNfpMUXGdewNjGNNmB_1UQh1f-ptzq35luBQ2K1EKA9_ZBrZmXUqK7rIvXyCopppclTGdsPzAgg-u8A43Sz8HndZYByk7ElRC6RYJGiD-gA_pFpq8cy9SoEW9WnZArBGFiiEbFjw_qlN3Ld89NZuYVj7_9uTVm6RofhQHsagQiVHcKZlm_M1GU&amp;ea=0&amp;flash=0&amp;pra=7&amp;wgl=1&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjowfV0.&amp;dt=1602295093665&amp;bpp=6&amp;bdt=1945&amp;idt=449&amp;shv=r20201007&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D72f902e54d5f0b80%3AT%3D1602233330%3AS%3DALNI_MbHb1gRALGdvWPnM_0nUXuOGQ8dGA&amp;prev_fmts=336x280&amp;nras=1&amp;correlator=2629541098545&amp;frm=20&amp;pv=1&amp;ga_vid=1297472572.1602295094&amp;ga_sid=1602295094&amp;ga_hid=1515901452&amp;ga_fc=0&amp;iag=0&amp;icsg=141178&amp;dssz=16&amp;mdo=0&amp;mso=8&amp;u_tz=480&amp;u_his=2&amp;u_java=0&amp;u_h=2160&amp;u_w=3840&amp;u_ah=2120&amp;u_aw=3840&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1889&amp;bih=952&amp;scr_x=0&amp;scr_y=0&amp;eid=182982100%2C182982300&amp;oid=3&amp;pvsid=1253134278571968&amp;pem=91&amp;ref=https%3A%2F%2Fwww.jq22.com%2Fyanshi15518&amp;rx=0&amp;eae=2&amp;fc=896&amp;brdim=510%2C634%2C510%2C634%2C3840%2C0%2C1905%2C1040%2C1889%2C952&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=8200&amp;bc=31&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=461"
+                    marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"
+                    allowfullscreen="true" data-google-container-id="a!1" data-load-complete="true"></iframe>
+        </ins>
+    </ins>
+</ins>
+<iframe id="google_osd_static_frame_2580099104207" name="google_osd_static_frame"
+        style="display: none; width: 0px; height: 0px;"></iframe>
+</body>
+
+
+</html>
